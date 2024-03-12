@@ -219,8 +219,8 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="wfq-23-3l9"/>
                     </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dLo-Wv-R5g">
-                        <size key="itemSize" width="140" height="140"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="dLo-Wv-R5g">
+                        <size key="itemSize" width="393" height="200"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -232,16 +232,14 @@
             <constraints>
                 <constraint firstItem="KLW-CF-OYz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="29L-Fa-WQD"/>
                 <constraint firstItem="KLW-CF-OYz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3oQ-aR-uE1"/>
-                <constraint firstItem="hf5-xP-SiM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="568-ZS-I2c"/>
                 <constraint firstItem="FUj-6e-39g" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5J4-1j-acl"/>
-                <constraint firstItem="hf5-xP-SiM" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="8nA-rw-lJI"/>
                 <constraint firstItem="FUj-6e-39g" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="AOU-fd-HDj"/>
                 <constraint firstItem="hf5-xP-SiM" firstAttribute="top" secondItem="Tjo-Lf-6nL" secondAttribute="bottom" constant="47" id="DJu-XH-mId"/>
                 <constraint firstAttribute="bottom" secondItem="FUj-6e-39g" secondAttribute="bottom" id="dZH-Kr-6jF"/>
                 <constraint firstItem="FUj-6e-39g" firstAttribute="top" secondItem="hf5-xP-SiM" secondAttribute="bottom" constant="18" id="ema-fg-fuz"/>
                 <constraint firstItem="hf5-xP-SiM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hOk-N0-5fW"/>
+                <constraint firstAttribute="trailing" secondItem="hf5-xP-SiM" secondAttribute="trailing" id="nTG-df-XLc"/>
                 <constraint firstItem="Tjo-Lf-6nL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qYo-XU-NIh"/>
-                <constraint firstItem="hf5-xP-SiM" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="qfP-dC-g2A"/>
                 <constraint firstItem="Tjo-Lf-6nL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="rxE-52-nZd"/>
                 <constraint firstItem="Tjo-Lf-6nL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="tcU-TD-Zgk"/>
                 <constraint firstItem="FUj-6e-39g" firstAttribute="top" secondItem="hf5-xP-SiM" secondAttribute="bottom" constant="18" id="vYU-ZT-bXw"/>
