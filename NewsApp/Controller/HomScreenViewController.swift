@@ -24,6 +24,8 @@ class HomScreenViewController: UIViewController,UIScrollViewDelegate{
     @IBOutlet weak var bannercollectionView: UICollectionView!
     
     
+ 
+    
     var cellDataSource:[NewsTableCellModel]=[]
     var viewModel:MainViewModel=MainViewModel()
     

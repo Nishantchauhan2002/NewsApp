@@ -29,7 +29,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FUj-6e-39g">
-                    <rect key="frame" x="0.0" y="357" width="393" height="495"/>
+                    <rect key="frame" x="0.0" y="337" width="393" height="481"/>
                     <color key="backgroundColor" red="0.18823529410000001" green="0.20392156859999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="sectionIndexBackgroundColor" red="0.18823529410000001" green="0.20392156859999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,7 +42,7 @@
                     </constraints>
                 </activityIndicatorView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjo-Lf-6nL">
-                    <rect key="frame" x="0.0" y="89" width="393" height="40"/>
+                    <rect key="frame" x="0.0" y="69" width="393" height="40"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E0i-rC-Afy">
                             <rect key="frame" x="0.0" y="0.0" width="720" height="40"/>
@@ -215,7 +215,7 @@
                     </constraints>
                 </scrollView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="hf5-xP-SiM">
-                    <rect key="frame" x="0.0" y="139" width="393" height="200"/>
+                    <rect key="frame" x="0.0" y="119" width="393" height="200"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="wfq-23-3l9"/>
@@ -236,13 +236,13 @@
                 <constraint firstItem="FUj-6e-39g" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5J4-1j-acl"/>
                 <constraint firstItem="FUj-6e-39g" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="AOU-fd-HDj"/>
                 <constraint firstItem="hf5-xP-SiM" firstAttribute="top" secondItem="Tjo-Lf-6nL" secondAttribute="bottom" constant="10" id="DJu-XH-mId"/>
-                <constraint firstAttribute="bottom" secondItem="FUj-6e-39g" secondAttribute="bottom" id="dZH-Kr-6jF"/>
+                <constraint firstItem="FUj-6e-39g" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="UBU-3V-Vts"/>
                 <constraint firstItem="FUj-6e-39g" firstAttribute="top" secondItem="hf5-xP-SiM" secondAttribute="bottom" constant="18" id="ema-fg-fuz"/>
                 <constraint firstItem="hf5-xP-SiM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hOk-N0-5fW"/>
                 <constraint firstAttribute="trailing" secondItem="hf5-xP-SiM" secondAttribute="trailing" id="nTG-df-XLc"/>
                 <constraint firstItem="Tjo-Lf-6nL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qYo-XU-NIh"/>
                 <constraint firstItem="Tjo-Lf-6nL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="rxE-52-nZd"/>
-                <constraint firstItem="Tjo-Lf-6nL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="tcU-TD-Zgk"/>
+                <constraint firstItem="Tjo-Lf-6nL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="tcU-TD-Zgk"/>
                 <constraint firstItem="FUj-6e-39g" firstAttribute="top" secondItem="hf5-xP-SiM" secondAttribute="bottom" constant="18" id="vYU-ZT-bXw"/>
             </constraints>
             <point key="canvasLocation" x="90.839694656488547" y="19.718309859154932"/>
