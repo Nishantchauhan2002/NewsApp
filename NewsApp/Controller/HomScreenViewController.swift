@@ -7,8 +7,9 @@
 
 import UIKit
 
-class HomScreenViewController: UIViewController{
+class HomScreenViewController: UIViewController,UIScrollViewDelegate{
     
+    @IBOutlet weak var clheight: NSLayoutConstraint!
     @IBOutlet weak var newsTableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -89,6 +90,32 @@ class HomScreenViewController: UIViewController{
             self.reloadTableView()
         }
     }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView == newsTableView {
+            // Adjust contentInset and contentOffset for the table view
+            if (scrollView.contentOffset.y <= 0 ){
+                UIView.animate(withDuration: 0.3){
+                    self.clheight.constant = 200
+                    self.bannercollectionView.isHidden=false
+                    
+                    self.view.layoutIfNeeded()
+                    
+                }
+                
+            }else{
+                UIView.animate(withDuration: 0.3){
+                    self.newsTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+                    self.bannercollectionView.isHidden=true
+                    self.clheight.constant=0
+
+
+                    self.view.layoutIfNeeded()
+                }
+                
+            }
+            
+        }
+    }
     
     func resetButton(){
         allButtonReference.backgroundColor = UIColor(hex: "6F727B")
@@ -115,38 +142,38 @@ class HomScreenViewController: UIViewController{
         if sender.tag == 1 {
             allButtonReference.backgroundColor = UIColor(hex: "6F5EBF")
             allButtonReference.setTitleColor(.white, for: .normal)
-          //  viewModel.getData(param: "everything")
+            viewModel.getData(param: "everything")
             
         }
         if sender.tag == 2 {
             
             sportsButton.backgroundColor = UIColor(hex: "6F5EBF")
             sportsButton.setTitleColor(.white, for: .normal)
-            //viewModel.getData(param: "sports")
+            viewModel.getData(param: "sports")
         }
         if sender.tag == 3 {
             
             educationButton.backgroundColor = UIColor(hex: "6F5EBF")
             educationButton.setTitleColor(.white, for: .normal)
-         //   viewModel.getData(param: "education")
+            viewModel.getData(param: "education")
         }
         if sender.tag == 4 {
             
             politicsButton.backgroundColor = UIColor(hex: "6F5EBF")
             politicsButton.setTitleColor(.white, for: .normal)
-            //viewModel.getData(param: "politics")
+            viewModel.getData(param: "politics")
         }
         if sender.tag == 5 {
             
             festivalButton.backgroundColor = UIColor(hex: "6F5EBF")
             festivalButton.setTitleColor(.white, for: .normal)
-          //  viewModel.getData(param: "festival")
+            viewModel.getData(param: "festival")
         }
         if sender.tag == 6 {
             
             fashionButton.backgroundColor = UIColor(hex: "6F5EBF")
             fashionButton.setTitleColor(.white, for: .normal)
-         //   viewModel.getData(param: "fashion")
+            viewModel.getData(param: "fashion")
         }
     }
 }

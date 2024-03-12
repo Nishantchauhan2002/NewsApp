@@ -13,6 +13,7 @@
                 <outlet property="activityIndicator" destination="KLW-CF-OYz" id="GgG-qB-3sO"/>
                 <outlet property="allButtonReference" destination="QvI-1V-k1x" id="kP2-4i-tns"/>
                 <outlet property="bannercollectionView" destination="hf5-xP-SiM" id="K8j-5K-bhx"/>
+                <outlet property="clheight" destination="wfq-23-3l9" id="uXy-tQ-ZL2"/>
                 <outlet property="educationButton" destination="snZ-rG-G1v" id="Mb6-gt-ceY"/>
                 <outlet property="fashionButton" destination="LkV-vc-6gH" id="sAL-Ef-oin"/>
                 <outlet property="festivalButton" destination="fOn-iy-wdy" id="cLX-c4-kQv"/>
@@ -28,7 +29,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FUj-6e-39g">
-                    <rect key="frame" x="0.0" y="394" width="393" height="458"/>
+                    <rect key="frame" x="0.0" y="357" width="393" height="495"/>
                     <color key="backgroundColor" red="0.18823529410000001" green="0.20392156859999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="sectionIndexBackgroundColor" red="0.18823529410000001" green="0.20392156859999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -214,7 +215,7 @@
                     </constraints>
                 </scrollView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="hf5-xP-SiM">
-                    <rect key="frame" x="0.0" y="176" width="393" height="200"/>
+                    <rect key="frame" x="0.0" y="139" width="393" height="200"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="wfq-23-3l9"/>
@@ -234,7 +235,7 @@
                 <constraint firstItem="KLW-CF-OYz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3oQ-aR-uE1"/>
                 <constraint firstItem="FUj-6e-39g" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5J4-1j-acl"/>
                 <constraint firstItem="FUj-6e-39g" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="AOU-fd-HDj"/>
-                <constraint firstItem="hf5-xP-SiM" firstAttribute="top" secondItem="Tjo-Lf-6nL" secondAttribute="bottom" constant="47" id="DJu-XH-mId"/>
+                <constraint firstItem="hf5-xP-SiM" firstAttribute="top" secondItem="Tjo-Lf-6nL" secondAttribute="bottom" constant="10" id="DJu-XH-mId"/>
                 <constraint firstAttribute="bottom" secondItem="FUj-6e-39g" secondAttribute="bottom" id="dZH-Kr-6jF"/>
                 <constraint firstItem="FUj-6e-39g" firstAttribute="top" secondItem="hf5-xP-SiM" secondAttribute="bottom" constant="18" id="ema-fg-fuz"/>
                 <constraint firstItem="hf5-xP-SiM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hOk-N0-5fW"/>
