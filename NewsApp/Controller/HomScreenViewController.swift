@@ -205,6 +205,7 @@ extension HomScreenViewController:UICollectionViewDelegate,UICollectionViewDataS
         bannercollectionView.delegate=self
         bannercollectionView.dataSource=self
         bannercollectionView.isPagingEnabled=true
+        bannercollectionView.layer.cornerRadius=24
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -215,13 +216,14 @@ extension HomScreenViewController:UICollectionViewDelegate,UICollectionViewDataS
         let cell:BannerCollectionViewCell=bannercollectionView.dequeueReusableCell(withReuseIdentifier: "bannercollectionViewcell", for: indexPath) as! BannerCollectionViewCell
 //        let cellModel = cellDataSource[0]
 //        cell.setUpCell(viewmodel: cellModel)
-        cell.bannerImage.sd_setImage(with: URL(string: "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/11787/production/_124395517_bbcbreakingnewsgraphic.jpg"))
+    
+        cell.bannerImage.sd_setImage(with: URL(string: "https://cdn.mos.cms.futurecdn.net/W2kxjgtLvzsztzYMbKJRFD-1200-80.jpg"))
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 393 ,height: 300)
+        return CGSize(width: 393 ,height: 200)
     }
     
     
