@@ -29,6 +29,9 @@
 		36B5BBBC2B9F0E4D0066B400 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B5BBBA2B9F0E4D0066B400 /* NewsDetailViewController.swift */; };
 		36B5BBBD2B9F0E4D0066B400 /* NewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B5BBBB2B9F0E4D0066B400 /* NewsDetailViewController.xib */; };
 		36B5BBBF2B9F14780066B400 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B5BBBE2B9F14780066B400 /* DetailViewModel.swift */; };
+		36F57B942BA031E80090CDBF /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F57B922BA031E80090CDBF /* BannerCollectionViewCell.swift */; };
+		36F57B952BA031E80090CDBF /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F57B932BA031E80090CDBF /* BannerCollectionViewCell.xib */; };
+		36F57B972BA034A00090CDBF /* BannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F57B962BA034A00090CDBF /* BannerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		36B5BBBA2B9F0E4D0066B400 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		36B5BBBB2B9F0E4D0066B400 /* NewsDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDetailViewController.xib; sourceTree = "<group>"; };
 		36B5BBBE2B9F14780066B400 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		36F57B922BA031E80090CDBF /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		36F57B932BA031E80090CDBF /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		36F57B962BA034A00090CDBF /* BannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +165,8 @@
 			children = (
 				367144582B9B208400FA53B4 /* HomScreenViewController.swift */,
 				367144592B9B208400FA53B4 /* HomScreenViewController.xib */,
+				36F57B922BA031E80090CDBF /* BannerCollectionViewCell.swift */,
+				36F57B932BA031E80090CDBF /* BannerCollectionViewCell.xib */,
 				3671445D2B9B237300FA53B4 /* newsTableViewCell.swift */,
 				3671445E2B9B237300FA53B4 /* newsTableViewCell.xib */,
 				36B5BBBA2B9F0E4D0066B400 /* NewsDetailViewController.swift */,
@@ -191,6 +199,7 @@
 				36B5BBB12B9ECEB40066B400 /* NewsTableCellModel.swift */,
 				36B5BBB32B9ED2BD0066B400 /* MainViewModel.swift */,
 				36B5BBBE2B9F14780066B400 /* DetailViewModel.swift */,
+				36F57B962BA034A00090CDBF /* BannerViewModel.swift */,
 				367144612B9B2FDB00FA53B4 /* NewsCellModel.swift */,
 			);
 			path = NewsCellViewModel;
@@ -311,6 +320,7 @@
 				36B5BBBD2B9F0E4D0066B400 /* NewsDetailViewController.xib in Resources */,
 				367144312B9B205400FA53B4 /* Assets.xcassets in Resources */,
 				367144602B9B237300FA53B4 /* newsTableViewCell.xib in Resources */,
+				36F57B952BA031E80090CDBF /* BannerCollectionViewCell.xib in Resources */,
 				3671445B2B9B208400FA53B4 /* HomScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,9 +348,11 @@
 			files = (
 				36B5BBAF2B9ECD4D0066B400 /* Observable.swift in Sources */,
 				367144622B9B2FDB00FA53B4 /* NewsCellModel.swift in Sources */,
+				36F57B972BA034A00090CDBF /* BannerViewModel.swift in Sources */,
 				3671445A2B9B208400FA53B4 /* HomScreenViewController.swift in Sources */,
 				367144252B9B205200FA53B4 /* AppDelegate.swift in Sources */,
 				36B5BBAC2B9EC8B90066B400 /* APICaller.swift in Sources */,
+				36F57B942BA031E80090CDBF /* BannerCollectionViewCell.swift in Sources */,
 				36B5BBB42B9ED2BD0066B400 /* MainViewModel.swift in Sources */,
 				36B5BBBC2B9F0E4D0066B400 /* NewsDetailViewController.swift in Sources */,
 				36B5BBBF2B9F14780066B400 /* DetailViewModel.swift in Sources */,

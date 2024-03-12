@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="activityIndicator" destination="KLW-CF-OYz" id="GgG-qB-3sO"/>
                 <outlet property="allButtonReference" destination="QvI-1V-k1x" id="kP2-4i-tns"/>
+                <outlet property="bannercollectionView" destination="hf5-xP-SiM" id="K8j-5K-bhx"/>
                 <outlet property="educationButton" destination="snZ-rG-G1v" id="Mb6-gt-ceY"/>
                 <outlet property="fashionButton" destination="LkV-vc-6gH" id="sAL-Ef-oin"/>
                 <outlet property="festivalButton" destination="fOn-iy-wdy" id="cLX-c4-kQv"/>
@@ -27,8 +28,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FUj-6e-39g">
-                    <rect key="frame" x="0.0" y="252" width="393" height="600"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <rect key="frame" x="0.0" y="394" width="393" height="458"/>
+                    <color key="backgroundColor" red="0.18823529410000001" green="0.20392156859999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="sectionIndexBackgroundColor" red="0.18823529410000001" green="0.20392156859999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="KLW-CF-OYz">
@@ -211,19 +213,38 @@
                         <constraint firstAttribute="height" constant="40" id="j4T-yF-xjp"/>
                     </constraints>
                 </scrollView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="hf5-xP-SiM">
+                    <rect key="frame" x="0.0" y="176" width="393" height="200"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="wfq-23-3l9"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dLo-Wv-R5g">
+                        <size key="itemSize" width="140" height="140"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.18823529410000001" green="0.20392156859999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="FUj-6e-39g" firstAttribute="top" secondItem="Tjo-Lf-6nL" secondAttribute="bottom" constant="123" id="0tq-AF-nDe"/>
                 <constraint firstItem="KLW-CF-OYz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="29L-Fa-WQD"/>
                 <constraint firstItem="KLW-CF-OYz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3oQ-aR-uE1"/>
+                <constraint firstItem="hf5-xP-SiM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="568-ZS-I2c"/>
                 <constraint firstItem="FUj-6e-39g" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5J4-1j-acl"/>
+                <constraint firstItem="hf5-xP-SiM" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="8nA-rw-lJI"/>
                 <constraint firstItem="FUj-6e-39g" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="AOU-fd-HDj"/>
+                <constraint firstItem="hf5-xP-SiM" firstAttribute="top" secondItem="Tjo-Lf-6nL" secondAttribute="bottom" constant="47" id="DJu-XH-mId"/>
                 <constraint firstAttribute="bottom" secondItem="FUj-6e-39g" secondAttribute="bottom" id="dZH-Kr-6jF"/>
+                <constraint firstItem="FUj-6e-39g" firstAttribute="top" secondItem="hf5-xP-SiM" secondAttribute="bottom" constant="18" id="ema-fg-fuz"/>
+                <constraint firstItem="hf5-xP-SiM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hOk-N0-5fW"/>
                 <constraint firstItem="Tjo-Lf-6nL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qYo-XU-NIh"/>
+                <constraint firstItem="hf5-xP-SiM" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="qfP-dC-g2A"/>
                 <constraint firstItem="Tjo-Lf-6nL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="rxE-52-nZd"/>
                 <constraint firstItem="Tjo-Lf-6nL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="tcU-TD-Zgk"/>
+                <constraint firstItem="FUj-6e-39g" firstAttribute="top" secondItem="hf5-xP-SiM" secondAttribute="bottom" constant="18" id="vYU-ZT-bXw"/>
             </constraints>
             <point key="canvasLocation" x="90.839694656488547" y="19.718309859154932"/>
         </view>

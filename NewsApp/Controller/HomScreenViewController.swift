@@ -20,6 +20,8 @@ class HomScreenViewController: UIViewController{
     @IBOutlet weak var politicsButton: UIButton!
     @IBOutlet weak var festivalButton: UIButton!
     @IBOutlet weak var fashionButton: UIButton!
+    @IBOutlet weak var bannercollectionView: UICollectionView!
+    
     
     var cellDataSource:[NewsTableCellModel]=[]
     var viewModel:MainViewModel=MainViewModel()
@@ -40,6 +42,7 @@ class HomScreenViewController: UIViewController{
         activityIndicator.startAnimating()
         
         newsTableView.register(UINib(nibName: "newsTableViewCell", bundle: nil), forCellReuseIdentifier: "newsCell")
+        bannercollectionView.register(UINib(nibName: "BannerCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "bannercollectionViewcell")
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -54,12 +57,13 @@ class HomScreenViewController: UIViewController{
         }
         
         setUpTableView()
+        setupCollectionView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         if(cellDataSource.count==0){
-            viewModel.getData()
+            viewModel.getData(param: "everything")
         }
     }
     
@@ -106,37 +110,44 @@ class HomScreenViewController: UIViewController{
     @IBAction func categoryResultSelectionButtonClicked(_ sender: UIButton) {
         
         resetButton();
+
         
         if sender.tag == 1 {
             allButtonReference.backgroundColor = UIColor(hex: "6F5EBF")
             allButtonReference.setTitleColor(.white, for: .normal)
+          //  viewModel.getData(param: "everything")
+            
         }
         if sender.tag == 2 {
             
             sportsButton.backgroundColor = UIColor(hex: "6F5EBF")
             sportsButton.setTitleColor(.white, for: .normal)
+            //viewModel.getData(param: "sports")
         }
         if sender.tag == 3 {
             
             educationButton.backgroundColor = UIColor(hex: "6F5EBF")
             educationButton.setTitleColor(.white, for: .normal)
+         //   viewModel.getData(param: "education")
         }
         if sender.tag == 4 {
             
             politicsButton.backgroundColor = UIColor(hex: "6F5EBF")
             politicsButton.setTitleColor(.white, for: .normal)
+            //viewModel.getData(param: "politics")
         }
         if sender.tag == 5 {
             
             festivalButton.backgroundColor = UIColor(hex: "6F5EBF")
             festivalButton.setTitleColor(.white, for: .normal)
+          //  viewModel.getData(param: "festival")
         }
         if sender.tag == 6 {
             
             fashionButton.backgroundColor = UIColor(hex: "6F5EBF")
             fashionButton.setTitleColor(.white, for: .normal)
+         //   viewModel.getData(param: "fashion")
         }
-        
     }
 }
     
@@ -148,6 +159,10 @@ extension HomScreenViewController: UITableViewDelegate , UITableViewDataSource{
         self.newsTableView.dataSource=self
         self.newsTableView.delegate=self
     }
+    func scrollToTop() {
+            let topOffset = CGPoint(x: 0, y: -self.newsTableView.contentInset.top)
+            self.newsTableView.setContentOffset(topOffset, animated: false)
+        }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.numberOfSections()
@@ -179,10 +194,38 @@ extension HomScreenViewController: UITableViewDelegate , UITableViewDataSource{
         navigationController?.pushViewController(controller, animated: true)
     }
     func reloadTableView(){
-        DispatchQueue.main.async {
+        DispatchQueue.main.async {[self] in
+            scrollToTop()
             self.newsTableView.reloadData()
         }
     }
+}
+extension HomScreenViewController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    func setupCollectionView(){
+        bannercollectionView.delegate=self
+        bannercollectionView.dataSource=self
+        bannercollectionView.isPagingEnabled=true
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10;
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell:BannerCollectionViewCell=bannercollectionView.dequeueReusableCell(withReuseIdentifier: "bannercollectionViewcell", for: indexPath) as! BannerCollectionViewCell
+//        let cellModel = cellDataSource[0]
+//        cell.setUpCell(viewmodel: cellModel)
+        cell.bannerImage.sd_setImage(with: URL(string: "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/11787/production/_124395517_bbcbreakingnewsgraphic.jpg"))
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 393 ,height: 300)
+    }
+    
+    
+    
 }
 extension UIColor {
     convenience init(hex: String, alpha: CGFloat = 1.0) {

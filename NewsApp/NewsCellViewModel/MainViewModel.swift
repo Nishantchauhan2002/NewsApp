@@ -10,15 +10,16 @@ class MainViewModel{
     var isLoading:Observable<Bool>=Observable(false)
     var dataSource:NewsCellModel?
     
+    
     var cellDataSource:Observable<[NewsTableCellModel]>=Observable(nil)
     
-    func getData(){
+    func getData(param:String){
         if isLoading.value ?? true{
             return
         }
         isLoading.value = true
         
-        APICaller.getTrendingNews {[weak self] result in
+        APICaller.getTrendingNews(param: param) {[weak self] result in
             self?.isLoading.value = false
             switch result{
             case .success(let data):

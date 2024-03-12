@@ -14,14 +14,20 @@ enum NetworkError:Error{
 
 class APICaller{
     
-    static func getTrendingNews(
+    static func getTrendingNews(param:String,
         completionHandler:@escaping (_ result:Result<NewsCellModel,NetworkError>) -> Void){
         
-            let urlString = "https://newsapi.org/v2/everything?q=india&from=2024-02-11&sortBy=publishedAt&apiKey=000b455629614e679b6a11752b8aa06f&language=en"
+//            var urlString = "https://newsapi.org/v2/everything?from=2024-02-11&sortBy=publishedAt&apiKey=000b455629614e679b6a11752b8aa06f&language=en"
             
-            guard let url=URL(string: urlString) else{
+        var urlString="https://newsapi.org/v2/everything?apiKey=000b455629614e679b6a11752b8aa06f&language=en"
+        if !param.isEmpty{
+            urlString.append("&q=\(param)")
+        }
+            guard var url=URL(string: urlString) else{
                 return completionHandler(.failure(.urlError))
             }
+        
+        
             URLSession.shared.dataTask(with: url) { (dataResponse, urlResponse, error) in
                 print(dataResponse)
                 if error == nil,
