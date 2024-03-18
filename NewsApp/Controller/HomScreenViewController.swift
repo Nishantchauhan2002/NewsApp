@@ -28,6 +28,13 @@ class HomScreenViewController: UIViewController,UIScrollViewDelegate{
     
     var cellDataSource:[NewsTableCellModel]=[]
     var viewModel:MainViewModel=MainViewModel()
+    var bannerDataSource:[BannerModel]=[]
+    var bannerViewModel:BannerViewModel=BannerViewModel()
+    
+    var timer: Timer?
+    let timeInterval: Double = 2.0
+    var currentIndex: Int = 0
+    var itemList : [String] = []
     
     @IBOutlet weak var topButtonsCollectionView: UICollectionView!
     
@@ -35,6 +42,7 @@ class HomScreenViewController: UIViewController,UIScrollViewDelegate{
         super.viewDidLoad()
         configureView()
         bindViewModel()
+        bindBannerViewModel()
         allButtonReference.layer.cornerRadius=20.0
         sportsButton.layer.cornerRadius=20.0
         educationButton.layer.cornerRadius=20.0
@@ -46,10 +54,18 @@ class HomScreenViewController: UIViewController,UIScrollViewDelegate{
         
         newsTableView.register(UINib(nibName: "newsTableViewCell", bundle: nil), forCellReuseIdentifier: "newsCell")
         bannercollectionView.register(UINib(nibName: "BannerCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "bannercollectionViewcell")
+        
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.reloadTableView()
+        
+        if (bannerDataSource.count != 0 ){
+            timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(scrollNext), userInfo: nil, repeats: true)
+        }
+      
+        
     }
 
     
@@ -66,7 +82,8 @@ class HomScreenViewController: UIViewController,UIScrollViewDelegate{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         if(cellDataSource.count==0){
-//            viewModel.getData(param: "everything")
+            viewModel.getData(param: "everything")
+            bannerViewModel.getBannerData()
         }
     }
     
@@ -92,6 +109,29 @@ class HomScreenViewController: UIViewController,UIScrollViewDelegate{
             self.reloadTableView()
         }
     }
+    func bindBannerViewModel(){
+        bannerViewModel.isLoading.bind { [weak self] isLoading in
+            guard let self = self
+                    , let isLoading = isLoading else{
+                return
+            }
+            DispatchQueue.main.async {
+                if isLoading{
+                    self.activityIndicator.startAnimating()
+                }else{
+                    self.activityIndicator.stopAnimating()
+                }
+            }
+        }
+        bannerViewModel.bannerDataSource.bind{[weak self] news in
+            guard let self = self , let news = news else{
+                return
+            }
+            self.bannerDataSource=news
+            self.reloadCollectionView()
+        }
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView == newsTableView {
             // Adjust contentInset and contentOffset for the table view
@@ -228,6 +268,11 @@ extension HomScreenViewController: UITableViewDelegate , UITableViewDataSource{
             self.newsTableView.reloadData()
         }
     }
+    func reloadCollectionView(){
+        DispatchQueue.main.async {[self] in
+            self.bannercollectionView.reloadData()
+        }
+    }
 }
 extension HomScreenViewController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func setupCollectionView(){
@@ -238,15 +283,18 @@ extension HomScreenViewController:UICollectionViewDelegate,UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10;
+        return bannerDataSource.count;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:BannerCollectionViewCell=bannercollectionView.dequeueReusableCell(withReuseIdentifier: "bannercollectionViewcell", for: indexPath) as! BannerCollectionViewCell
-//        let cellModel = cellDataSource[0]
-//        cell.setUpCell(viewmodel: cellModel)
+        let cellModel = bannerDataSource[indexPath.row]
+       
+        
+        cell.setUpCell(viewmodel: cellModel)
+        
     
-        cell.bannerImage.sd_setImage(with: URL(string: "https://cdn.mos.cms.futurecdn.net/W2kxjgtLvzsztzYMbKJRFD-1200-80.jpg"))
+//        cell.bannerImage.sd_setImage(with: URL(string: "https://cdn.mos.cms.futurecdn.net/W2kxjgtLvzsztzYMbKJRFD-1200-80.jpg"))
         
         return cell
     }
@@ -254,6 +302,14 @@ extension HomScreenViewController:UICollectionViewDelegate,UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 393 ,height: 200)
     }
+    
+    @objc func scrollNext(){
+            if(currentIndex < 20 - 1){
+                currentIndex = currentIndex + 1;
+            
+            }
+        bannercollectionView.scrollToItem(at: IndexPath(item: currentIndex, section: 0), at: .centeredHorizontally , animated: true)
+        }
     
     
     
