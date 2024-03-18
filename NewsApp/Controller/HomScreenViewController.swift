@@ -13,6 +13,9 @@ class HomScreenViewController: UIViewController,UIScrollViewDelegate{
     @IBOutlet weak var newsTableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    
+    @IBOutlet weak var footerView: UIView!
+    
     @IBOutlet var btnrefernce: [UIButton]!
     
     @IBOutlet weak var allButtonReference: UIButton!
@@ -23,9 +26,35 @@ class HomScreenViewController: UIViewController,UIScrollViewDelegate{
     @IBOutlet weak var fashionButton: UIButton!
     @IBOutlet weak var bannercollectionView: UICollectionView!
     
+    @IBOutlet weak var footerhomeButtonView: UIView!
+    @IBOutlet weak var footersearchView: UIView!
+    @IBOutlet weak var footersavedView: UIView!
+    @IBOutlet weak var footerPersonView: UIView!
     
- 
     
+    @IBAction func footerButtonClicked(_ sender: UIButton) {
+        
+        footerhomeButtonView.backgroundColor = .clear
+        footersearchView.backgroundColor = .clear
+        footersavedView.backgroundColor = .clear
+        footerPersonView.backgroundColor = .clear
+
+        if sender.tag == 0{
+            footerhomeButtonView.backgroundColor = .systemIndigo
+            footerhomeButtonView.layer.cornerRadius = 20.0
+        }else if sender.tag == 1{
+            footersearchView.backgroundColor = .systemIndigo
+            footersearchView.layer.cornerRadius = 20.0
+        }else if sender.tag == 2{
+            footersavedView.backgroundColor = .systemIndigo
+            footersavedView.layer.cornerRadius = 20.0
+
+        }else if sender.tag == 3{
+            footerPersonView.backgroundColor = .systemIndigo
+            footerPersonView.layer.cornerRadius = 20.0
+        }
+
+    }
     var cellDataSource:[NewsTableCellModel]=[]
     var viewModel:MainViewModel=MainViewModel()
     var bannerDataSource:[BannerModel]=[]
@@ -49,6 +78,7 @@ class HomScreenViewController: UIViewController,UIScrollViewDelegate{
         politicsButton.layer.cornerRadius=20.0
         festivalButton.layer.cornerRadius=20.0
         fashionButton.layer.cornerRadius=20.0
+        footerView.layer.cornerRadius = 20.0
         
         activityIndicator.startAnimating()
         
@@ -139,7 +169,8 @@ class HomScreenViewController: UIViewController,UIScrollViewDelegate{
                 UIView.animate(withDuration: 0.3){
                     self.clheight.constant = 200
                     self.bannercollectionView.isHidden=false
-                    
+                    self.footerView.isHidden=false
+
                     self.view.layoutIfNeeded()
                     
                 }
@@ -149,6 +180,7 @@ class HomScreenViewController: UIViewController,UIScrollViewDelegate{
                     self.newsTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
                     self.bannercollectionView.isHidden=true
                     self.clheight.constant=0
+                    self.footerView.isHidden=true
 
 
                     self.view.layoutIfNeeded()
