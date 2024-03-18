@@ -66,7 +66,7 @@ class HomScreenViewController: UIViewController,UIScrollViewDelegate{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         if(cellDataSource.count==0){
-            viewModel.getData(param: "everything")
+//            viewModel.getData(param: "everything")
         }
     }
     

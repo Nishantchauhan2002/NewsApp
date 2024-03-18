@@ -20,6 +20,7 @@
 		3671445F2B9B237300FA53B4 /* newsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3671445D2B9B237300FA53B4 /* newsTableViewCell.swift */; };
 		367144602B9B237300FA53B4 /* newsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3671445E2B9B237300FA53B4 /* newsTableViewCell.xib */; };
 		367144622B9B2FDB00FA53B4 /* NewsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367144612B9B2FDB00FA53B4 /* NewsCellModel.swift */; };
+		3671C6382BA8125300EF9C66 /* SignUpDb.db in Resources */ = {isa = PBXBuildFile; fileRef = 3671C6372BA8125200EF9C66 /* SignUpDb.db */; };
 		36B5BBAC2B9EC8B90066B400 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B5BBAB2B9EC8B90066B400 /* APICaller.swift */; };
 		36B5BBAF2B9ECD4D0066B400 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B5BBAE2B9ECD4D0066B400 /* Observable.swift */; };
 		36B5BBB22B9ECEB40066B400 /* NewsTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B5BBB12B9ECEB40066B400 /* NewsTableCellModel.swift */; };
@@ -29,6 +30,20 @@
 		36B5BBBC2B9F0E4D0066B400 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B5BBBA2B9F0E4D0066B400 /* NewsDetailViewController.swift */; };
 		36B5BBBD2B9F0E4D0066B400 /* NewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B5BBBB2B9F0E4D0066B400 /* NewsDetailViewController.xib */; };
 		36B5BBBF2B9F14780066B400 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B5BBBE2B9F14780066B400 /* DetailViewModel.swift */; };
+		36BB93282BA1AEDE00F54B25 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB93262BA1AEDE00F54B25 /* LoginViewController.swift */; };
+		36BB93292BA1AEDE00F54B25 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BB93272BA1AEDE00F54B25 /* LoginViewController.xib */; };
+		36BB932C2BA1B17E00F54B25 /* LoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB932A2BA1B17E00F54B25 /* LoginFormViewController.swift */; };
+		36BB932D2BA1B17E00F54B25 /* LoginFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BB932B2BA1B17E00F54B25 /* LoginFormViewController.xib */; };
+		36BB93302BA1B4D900F54B25 /* SignUpFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB932E2BA1B4D900F54B25 /* SignUpFormViewController.swift */; };
+		36BB93312BA1B4D900F54B25 /* SignUpFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BB932F2BA1B4D900F54B25 /* SignUpFormViewController.xib */; };
+		36BB93362BA1C30E00F54B25 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB93352BA1C30E00F54B25 /* Util.swift */; };
+		36BB934A2BA1C55A00F54B25 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB93492BA1C55A00F54B25 /* SignUpModel.swift */; };
+		36BB934C2BA1C5AD00F54B25 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB934B2BA1C5AD00F54B25 /* DatabaseManager.swift */; };
+		36BB938A2BA1CDD500F54B25 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BB937F2BA1CDD400F54B25 /* FMDatabase.m */; };
+		36BB938B2BA1CDD500F54B25 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BB93802BA1CDD400F54B25 /* FMDatabaseAdditions.m */; };
+		36BB938C2BA1CDD500F54B25 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BB93852BA1CDD400F54B25 /* FMDatabaseQueue.m */; };
+		36BB938D2BA1CDD500F54B25 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BB93862BA1CDD400F54B25 /* FMResultSet.m */; };
+		36BB938E2BA1CDD500F54B25 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BB93872BA1CDD400F54B25 /* FMDatabasePool.m */; };
 		36F57B942BA031E80090CDBF /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F57B922BA031E80090CDBF /* BannerCollectionViewCell.swift */; };
 		36F57B952BA031E80090CDBF /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F57B932BA031E80090CDBF /* BannerCollectionViewCell.xib */; };
 		36F57B972BA034A00090CDBF /* BannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F57B962BA034A00090CDBF /* BannerViewModel.swift */; };
@@ -69,6 +84,7 @@
 		3671445D2B9B237300FA53B4 /* newsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsTableViewCell.swift; sourceTree = "<group>"; };
 		3671445E2B9B237300FA53B4 /* newsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = newsTableViewCell.xib; sourceTree = "<group>"; };
 		367144612B9B2FDB00FA53B4 /* NewsCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellModel.swift; sourceTree = "<group>"; };
+		3671C6372BA8125200EF9C66 /* SignUpDb.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = SignUpDb.db; sourceTree = "<group>"; };
 		36B5BBAB2B9EC8B90066B400 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		36B5BBAE2B9ECD4D0066B400 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		36B5BBB12B9ECEB40066B400 /* NewsTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableCellModel.swift; sourceTree = "<group>"; };
@@ -76,6 +92,27 @@
 		36B5BBBA2B9F0E4D0066B400 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		36B5BBBB2B9F0E4D0066B400 /* NewsDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDetailViewController.xib; sourceTree = "<group>"; };
 		36B5BBBE2B9F14780066B400 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		36BB93262BA1AEDE00F54B25 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		36BB93272BA1AEDE00F54B25 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		36BB932A2BA1B17E00F54B25 /* LoginFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormViewController.swift; sourceTree = "<group>"; };
+		36BB932B2BA1B17E00F54B25 /* LoginFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginFormViewController.xib; sourceTree = "<group>"; };
+		36BB932E2BA1B4D900F54B25 /* SignUpFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormViewController.swift; sourceTree = "<group>"; };
+		36BB932F2BA1B4D900F54B25 /* SignUpFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpFormViewController.xib; sourceTree = "<group>"; };
+		36BB93352BA1C30E00F54B25 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		36BB93492BA1C55A00F54B25 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
+		36BB934B2BA1C5AD00F54B25 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		36BB937F2BA1CDD400F54B25 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		36BB93802BA1CDD400F54B25 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		36BB93812BA1CDD400F54B25 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		36BB93822BA1CDD400F54B25 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		36BB93832BA1CDD400F54B25 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		36BB93842BA1CDD400F54B25 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		36BB93852BA1CDD400F54B25 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		36BB93862BA1CDD400F54B25 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		36BB93872BA1CDD400F54B25 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		36BB93882BA1CDD400F54B25 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		36BB93892BA1CDD500F54B25 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		36BB938F2BA1CDE600F54B25 /* NewsApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NewsApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		36F57B922BA031E80090CDBF /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		36F57B932BA031E80090CDBF /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		36F57B962BA034A00090CDBF /* BannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewModel.swift; sourceTree = "<group>"; };
@@ -131,6 +168,8 @@
 		367144232B9B205200FA53B4 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				36BB937E2BA1CDAD00F54B25 /* FMDB */,
+				36BB93342BA1C2F500F54B25 /* Database */,
 				3671445C2B9B217700FA53B4 /* Application */,
 				36B5BBB02B9ECE980066B400 /* NewsCellViewModel */,
 				36B5BBAD2B9ECD370066B400 /* Classes */,
@@ -171,6 +210,12 @@
 				3671445E2B9B237300FA53B4 /* newsTableViewCell.xib */,
 				36B5BBBA2B9F0E4D0066B400 /* NewsDetailViewController.swift */,
 				36B5BBBB2B9F0E4D0066B400 /* NewsDetailViewController.xib */,
+				36BB93262BA1AEDE00F54B25 /* LoginViewController.swift */,
+				36BB93272BA1AEDE00F54B25 /* LoginViewController.xib */,
+				36BB932A2BA1B17E00F54B25 /* LoginFormViewController.swift */,
+				36BB932B2BA1B17E00F54B25 /* LoginFormViewController.xib */,
+				36BB932E2BA1B4D900F54B25 /* SignUpFormViewController.swift */,
+				36BB932F2BA1B4D900F54B25 /* SignUpFormViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -203,6 +248,36 @@
 				367144612B9B2FDB00FA53B4 /* NewsCellModel.swift */,
 			);
 			path = NewsCellViewModel;
+			sourceTree = "<group>";
+		};
+		36BB93342BA1C2F500F54B25 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				3671C6372BA8125200EF9C66 /* SignUpDb.db */,
+				36BB93352BA1C30E00F54B25 /* Util.swift */,
+				36BB93492BA1C55A00F54B25 /* SignUpModel.swift */,
+				36BB934B2BA1C5AD00F54B25 /* DatabaseManager.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		36BB937E2BA1CDAD00F54B25 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				36BB938F2BA1CDE600F54B25 /* NewsApp-Bridging-Header.h */,
+				36BB93832BA1CDD400F54B25 /* FMDatabase.h */,
+				36BB937F2BA1CDD400F54B25 /* FMDatabase.m */,
+				36BB93822BA1CDD400F54B25 /* FMDatabaseAdditions.h */,
+				36BB93802BA1CDD400F54B25 /* FMDatabaseAdditions.m */,
+				36BB93812BA1CDD400F54B25 /* FMDatabasePool.h */,
+				36BB93872BA1CDD400F54B25 /* FMDatabasePool.m */,
+				36BB93842BA1CDD400F54B25 /* FMDatabaseQueue.h */,
+				36BB93852BA1CDD400F54B25 /* FMDatabaseQueue.m */,
+				36BB93882BA1CDD400F54B25 /* FMDB.h */,
+				36BB93892BA1CDD500F54B25 /* FMResultSet.h */,
+				36BB93862BA1CDD400F54B25 /* FMResultSet.m */,
+			);
+			path = FMDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +352,7 @@
 				TargetAttributes = {
 					367144202B9B205200FA53B4 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 					367144392B9B205500FA53B4 = {
 						CreatedOnToolsVersion = 14.2;
@@ -316,11 +392,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36BB932D2BA1B17E00F54B25 /* LoginFormViewController.xib in Resources */,
+				36BB93312BA1B4D900F54B25 /* SignUpFormViewController.xib in Resources */,
+				3671C6382BA8125300EF9C66 /* SignUpDb.db in Resources */,
 				367144342B9B205400FA53B4 /* LaunchScreen.storyboard in Resources */,
 				36B5BBBD2B9F0E4D0066B400 /* NewsDetailViewController.xib in Resources */,
 				367144312B9B205400FA53B4 /* Assets.xcassets in Resources */,
 				367144602B9B237300FA53B4 /* newsTableViewCell.xib in Resources */,
 				36F57B952BA031E80090CDBF /* BannerCollectionViewCell.xib in Resources */,
+				36BB93292BA1AEDE00F54B25 /* LoginViewController.xib in Resources */,
 				3671445B2B9B208400FA53B4 /* HomScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,12 +427,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				36B5BBAF2B9ECD4D0066B400 /* Observable.swift in Sources */,
+				36BB93362BA1C30E00F54B25 /* Util.swift in Sources */,
 				367144622B9B2FDB00FA53B4 /* NewsCellModel.swift in Sources */,
+				36BB938A2BA1CDD500F54B25 /* FMDatabase.m in Sources */,
+				36BB934A2BA1C55A00F54B25 /* SignUpModel.swift in Sources */,
 				36F57B972BA034A00090CDBF /* BannerViewModel.swift in Sources */,
+				36BB938D2BA1CDD500F54B25 /* FMResultSet.m in Sources */,
+				36BB934C2BA1C5AD00F54B25 /* DatabaseManager.swift in Sources */,
+				36BB938B2BA1CDD500F54B25 /* FMDatabaseAdditions.m in Sources */,
+				36BB93282BA1AEDE00F54B25 /* LoginViewController.swift in Sources */,
+				36BB932C2BA1B17E00F54B25 /* LoginFormViewController.swift in Sources */,
 				3671445A2B9B208400FA53B4 /* HomScreenViewController.swift in Sources */,
+				36BB938E2BA1CDD500F54B25 /* FMDatabasePool.m in Sources */,
 				367144252B9B205200FA53B4 /* AppDelegate.swift in Sources */,
+				36BB938C2BA1CDD500F54B25 /* FMDatabaseQueue.m in Sources */,
 				36B5BBAC2B9EC8B90066B400 /* APICaller.swift in Sources */,
 				36F57B942BA031E80090CDBF /* BannerCollectionViewCell.swift in Sources */,
+				36BB93302BA1B4D900F54B25 /* SignUpFormViewController.swift in Sources */,
 				36B5BBB42B9ED2BD0066B400 /* MainViewModel.swift in Sources */,
 				36B5BBBC2B9F0E4D0066B400 /* NewsDetailViewController.swift in Sources */,
 				36B5BBBF2B9F14780066B400 /* DetailViewModel.swift in Sources */,
@@ -526,6 +617,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -542,6 +634,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.Droom.NewsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NewsApp/FMDB/NewsApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -552,6 +646,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -568,6 +663,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.Droom.NewsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NewsApp/FMDB/NewsApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

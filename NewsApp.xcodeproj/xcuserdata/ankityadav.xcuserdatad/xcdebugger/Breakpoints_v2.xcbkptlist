@@ -183,32 +183,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0CCF05E2-4F26-4EB1-AFA3-C9A108046EDE"
-            shouldBeEnabled = "Yes"
+            uuid = "06F71C81-AC90-4119-BD2D-4830DA62897E"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NewsApp/Controller/BannerCollectionViewCell.swift"
+            filePath = "NewsApp/Database/Util.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "setUpCell(viewmodel:)"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "copyDatabase(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "16516E49-E9A7-4DAC-B183-DB6C750A7159"
-            shouldBeEnabled = "Yes"
+            uuid = "CD383C02-2722-4E70-A4C2-39F827D4296F"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NewsApp/Controller/BannerCollectionViewCell.swift"
+            filePath = "NewsApp/Database/Util.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "setUpCell(viewmodel:)"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "copyDatabase(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

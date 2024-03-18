@@ -19,7 +19,7 @@ class APICaller{
         
 //            var urlString = "https://newsapi.org/v2/everything?from=2024-02-11&sortBy=publishedAt&apiKey=000b455629614e679b6a11752b8aa06f&language=en"
             
-        var urlString="https://newsapi.org/v2/everything?apiKey=000b455629614e679b6a11752b8aa06f&language=en"
+        var urlString="https://newsapi.org/v2/everything?apiKey=000b455629614e679b6a11752b8aa06f&language=en&q=india"
         if !param.isEmpty{
             urlString.append("&q=\(param)")
         }
@@ -45,3 +45,4 @@ class APICaller{
     }
     
 }
+

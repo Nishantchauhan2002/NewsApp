@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="NewsApp" customModuleProvider="target">
+            <connections>
+                <outlet property="loginButton" destination="LFk-VW-0gC" id="qwO-pk-4DQ"/>
+                <outlet property="signUpButton" destination="zK2-5O-vsa" id="Ffs-4h-w0p"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="2BJ-Sw-djT">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFk-VW-0gC">
+                    <rect key="frame" x="62" y="405.66666666666669" width="269" height="41"/>
+                    <color key="backgroundColor" red="0.43529411759999997" green="0.44705882349999998" blue="0.85094205040000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="25"/>
+                    <color key="tintColor" red="0.43529411759999997" green="0.44705882349999998" blue="0.74869604820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="loginButtonClicked:" destination="-1" eventType="touchUpInside" id="6bo-Xk-7SI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zK2-5O-vsa">
+                    <rect key="frame" x="62" y="471.66666666666669" width="269" height="41.000000000000057"/>
+                    <color key="backgroundColor" red="0.43529411759999997" green="0.44705882349999998" blue="0.85094205040000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="25"/>
+                    <color key="tintColor" red="0.43529411759999997" green="0.44705882349999998" blue="0.74869604820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Sign Up">
+                        <color key="titleColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="signUpButtonClicked:" destination="-1" eventType="touchUpInside" id="x3X-MB-axR"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="LFk-VW-0gC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="62" id="6NP-Ue-6d8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zK2-5O-vsa" secondAttribute="trailing" constant="62" id="AhA-hm-I8h"/>
+                <constraint firstItem="LFk-VW-0gC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="CWw-Nk-wIO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LFk-VW-0gC" secondAttribute="trailing" constant="62" id="IGm-1Y-dUN"/>
+                <constraint firstItem="zK2-5O-vsa" firstAttribute="top" secondItem="LFk-VW-0gC" secondAttribute="bottom" constant="25" id="N7g-km-UED"/>
+                <constraint firstItem="2BJ-Sw-djT" firstAttribute="centerX" secondItem="LFk-VW-0gC" secondAttribute="centerX" id="SgT-te-v35"/>
+                <constraint firstItem="zK2-5O-vsa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="62" id="cAS-CJ-hFn"/>
+                <constraint firstItem="2BJ-Sw-djT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eTl-jA-2Gt"/>
+                <constraint firstItem="2BJ-Sw-djT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="re7-vc-8PI"/>
+                <constraint firstItem="2BJ-Sw-djT" firstAttribute="centerY" secondItem="LFk-VW-0gC" secondAttribute="centerY" id="xBn-ad-Eta"/>
+            </constraints>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="login" width="4000" height="2667"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
