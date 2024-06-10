@@ -1,9 +1,4 @@
-//
-//  APICaller.swift
-//  NewsApp
-//
-//  Created by Nishant Chauhan on 11/03/24.
-//
+
 
 import Foundation
 
