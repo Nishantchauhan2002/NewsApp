@@ -1,1 +1,3 @@
-.FMDB
+
+# Ignore a folder
+FMDB/
